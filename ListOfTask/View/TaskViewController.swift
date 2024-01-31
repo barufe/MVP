@@ -43,6 +43,7 @@ class TaskViewController: UIViewController {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = .systemGroupedBackground
         collectionView.register(TasksCollectionViewCell.self, forCellWithReuseIdentifier: "TasksCollectionViewCell")
+        collectionView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 0, right: 0)
         return collectionView
     }()
 
@@ -94,6 +95,7 @@ extension TaskViewController: UICollectionViewDataSource{
         cell.tapOnRemove = { [weak self] taskId in
             self?.presenter.removeTasks(taskId: taskId)
         }
+        
         
         return cell
     }
