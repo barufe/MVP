@@ -5,6 +5,8 @@
 //  Created by Germain Seijas on 29/01/24.
 //
 
+//Declaramos el Modelo
+
 import Foundation
 
 struct Task {

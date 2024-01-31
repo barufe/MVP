@@ -10,6 +10,8 @@ import UIKit
 class TaskViewController: UIViewController {
     var presenter = TaskPresenter()
     
+    
+    //Creamos las vistas
     private let taskTextView: UITextView = {
         let textView = UITextView()
         textView.font = UIFont.systemFont(ofSize: 18, weight: .regular)
@@ -47,15 +49,18 @@ class TaskViewController: UIViewController {
         return collectionView
     }()
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //Configuramoe el navigation
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Borrar Todos",
                                                                  style: .done,
                                                                  target: presenter,
                                                                  action: #selector(presenter.removeAllTasks))
         [taskTextView, createTaskButton, taskCollectionView].forEach(view.addSubview)
         
+        //Configuramos los constrains
         NSLayoutConstraint.activate([
             taskTextView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 20),
             taskTextView.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
@@ -72,14 +77,19 @@ class TaskViewController: UIViewController {
             taskCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             taskCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
+        
+        //Implementamos los delegados
         taskCollectionView.dataSource = self
         presenter.delegate = self
     }
+    
     @objc func didTapOnCreateTask(){
         print("Create task")
+        //Le avisamos al presenter que se pulso el boton de create
         presenter.create(task: taskTextView.text)
     }
 }
+
 extension TaskViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         presenter.tasks.count
@@ -87,21 +97,25 @@ extension TaskViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TasksCollectionViewCell", for: indexPath) as! TasksCollectionViewCell
+        
+        //Validamos a traves del modelo que tiene el presenter que id pulsamos
         let task = presenter.tasks[indexPath.row]
         cell.configure(id: task.id, text: task.text, isFavorite: task.isFavorite)
+        
+        //Le avisamos al presenter que pulsamos el boton de favorito con el id "pulsado"
         cell.tapOnFavorite = { [weak self] taskId in
             self?.presenter.updateFavorite(taskId: taskId)
         }
+        //Le avisamos al presenter que pulsamos el boton de remove con el id "pulsado"
         cell.tapOnRemove = { [weak self] taskId in
             self?.presenter.removeTasks(taskId: taskId)
         }
-        
-        
         return cell
     }
 }
 
 extension TaskViewController: UI{
+    //Se actualiza la informacion que le envio el dataBase al presenter y el presenter a la vista
     func update() {
         taskTextView.text = ""
         taskCollectionView.reloadData()
