@@ -7,12 +7,17 @@
 
 import Foundation
 
+protocol TaskNavigationDelegate: AnyObject {
+    func navigateToCalculator()
+}
+
 protocol UI: AnyObject {
     func update()
 }
 
 final class TaskPresenter{
     weak var delegate: UI?
+    weak var navigationDelegate: TaskNavigationDelegate?
     
     // creamos una variable del tipo de modelo que usaremos
     var tasks: [Task] = []
@@ -20,6 +25,10 @@ final class TaskPresenter{
     // instanciamos el dataBase
     private var taskDataBase = TaskDataBase()
     
+    func goToCalc() {
+          // Solicita a la vista que navegue a la nueva pantalla
+          navigationDelegate?.navigateToCalculator()
+    }
     func create(task: String) {
         guard !task.isEmpty else {
             return

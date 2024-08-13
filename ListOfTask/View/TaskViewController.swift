@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TaskViewController: UIViewController {
+class TaskViewController: UIViewController, TaskNavigationDelegate {
     var presenter = TaskPresenter()
     
     
@@ -25,6 +25,19 @@ class TaskViewController: UIViewController {
         return textView
     }()
     
+    private lazy var goToCalcButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Ir a Calculadora", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .systemBlue
+        button.layer.cornerRadius = 12
+        button.clipsToBounds = true
+        button.addTarget(self, action: #selector(didTapOnGoToCalc), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     private lazy var createTaskButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Crear", for: .normal)
@@ -38,6 +51,7 @@ class TaskViewController: UIViewController {
         return button
     }()
     
+        
     private lazy var taskCollectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = .init(width: 340, height: 80)
@@ -48,7 +62,7 @@ class TaskViewController: UIViewController {
         collectionView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 0, right: 0)
         return collectionView
     }()
-
+    
     
     
     override func viewDidLoad() {
@@ -58,7 +72,7 @@ class TaskViewController: UIViewController {
                                                                  style: .done,
                                                                  target: presenter,
                                                                  action: #selector(presenter.removeAllTasks))
-        [taskTextView, createTaskButton, taskCollectionView].forEach(view.addSubview)
+        [taskTextView, createTaskButton,goToCalcButton, taskCollectionView].forEach(view.addSubview)
         
         //Configuramos los constrains
         NSLayoutConstraint.activate([
@@ -72,7 +86,12 @@ class TaskViewController: UIViewController {
             createTaskButton.heightAnchor.constraint(equalToConstant: 40),
             createTaskButton.widthAnchor.constraint(equalToConstant: 80),
             
-            taskCollectionView.topAnchor.constraint(equalTo: createTaskButton.bottomAnchor, constant: 12),
+            goToCalcButton.topAnchor.constraint(equalTo: createTaskButton.bottomAnchor, constant: 60),
+            goToCalcButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            goToCalcButton.heightAnchor.constraint(equalToConstant: 40),
+            goToCalcButton.widthAnchor.constraint(equalToConstant: 80),
+            
+            taskCollectionView.topAnchor.constraint(equalTo: goToCalcButton.bottomAnchor, constant: 12),
             taskCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             taskCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             taskCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
@@ -81,6 +100,7 @@ class TaskViewController: UIViewController {
         //Implementamos los delegados
         taskCollectionView.dataSource = self
         presenter.delegate = self
+        presenter.navigationDelegate = self
     }
     
     @objc func didTapOnCreateTask(){
@@ -88,6 +108,17 @@ class TaskViewController: UIViewController {
         //Le avisamos al presenter que se pulso el boton de create
         presenter.create(task: taskTextView.text)
     }
+    @objc func didTapOnGoToCalc(){
+        print("Ir a calculadora")
+        presenter.goToCalc()
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    func navigateToCalculator() {
+            let calculatorViewController = CalculatorViewController()
+            navigationController?.pushViewController(calculatorViewController, animated: true)
+        }
 }
 
 extension TaskViewController: UICollectionViewDataSource{

@@ -17,6 +17,8 @@
 		070967982B6808DD00E009C0 /* TaskDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070967972B6808DD00E009C0 /* TaskDataBase.swift */; };
 		0709679A2B680B4300E009C0 /* TaskPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070967992B680B4300E009C0 /* TaskPresenter.swift */; };
 		0709679C2B684F1900E009C0 /* TasksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0709679B2B684F1900E009C0 /* TasksCollectionViewCell.swift */; };
+		204DA7F32C6AB45300868987 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204DA7F12C6AB45300868987 /* CalculatorViewController.swift */; };
+		204DA7F42C6AB45300868987 /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 204DA7F22C6AB45300868987 /* CalculatorViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		070967972B6808DD00E009C0 /* TaskDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDataBase.swift; sourceTree = "<group>"; };
 		070967992B680B4300E009C0 /* TaskPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPresenter.swift; sourceTree = "<group>"; };
 		0709679B2B684F1900E009C0 /* TasksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksCollectionViewCell.swift; sourceTree = "<group>"; };
+		204DA7F12C6AB45300868987 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		204DA7F22C6AB45300868987 /* CalculatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 			children = (
 				070967822B68053C00E009C0 /* TaskViewController.swift */,
 				0709679B2B684F1900E009C0 /* TasksCollectionViewCell.swift */,
+				204DA7F12C6AB45300868987 /* CalculatorViewController.swift */,
+				204DA7F22C6AB45300868987 /* CalculatorViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -163,6 +169,7 @@
 			files = (
 				0709678B2B68053F00E009C0 /* LaunchScreen.storyboard in Resources */,
 				070967882B68053F00E009C0 /* Assets.xcassets in Resources */,
+				204DA7F42C6AB45300868987 /* CalculatorViewController.xib in Resources */,
 				070967862B68053C00E009C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,6 +183,7 @@
 			files = (
 				070967982B6808DD00E009C0 /* TaskDataBase.swift in Sources */,
 				070967962B68087E00E009C0 /* Task.swift in Sources */,
+				204DA7F32C6AB45300868987 /* CalculatorViewController.swift in Sources */,
 				070967832B68053C00E009C0 /* TaskViewController.swift in Sources */,
 				0709679A2B680B4300E009C0 /* TaskPresenter.swift in Sources */,
 				0709679C2B684F1900E009C0 /* TasksCollectionViewCell.swift in Sources */,
