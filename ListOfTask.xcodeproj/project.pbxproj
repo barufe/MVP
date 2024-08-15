@@ -19,6 +19,8 @@
 		0709679C2B684F1900E009C0 /* TasksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0709679B2B684F1900E009C0 /* TasksCollectionViewCell.swift */; };
 		204DA7F32C6AB45300868987 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204DA7F12C6AB45300868987 /* CalculatorViewController.swift */; };
 		204DA7F42C6AB45300868987 /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 204DA7F22C6AB45300868987 /* CalculatorViewController.xib */; };
+		205AC9322C6C1A8400A1C82E /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205AC9302C6C1A8400A1C82E /* StackViewController.swift */; };
+		205AC9332C6C1A8400A1C82E /* StackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 205AC9312C6C1A8400A1C82E /* StackViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		0709679B2B684F1900E009C0 /* TasksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksCollectionViewCell.swift; sourceTree = "<group>"; };
 		204DA7F12C6AB45300868987 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		204DA7F22C6AB45300868987 /* CalculatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
+		205AC9302C6C1A8400A1C82E /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
+		205AC9312C6C1A8400A1C82E /* StackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StackViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,8 @@
 				0709679B2B684F1900E009C0 /* TasksCollectionViewCell.swift */,
 				204DA7F12C6AB45300868987 /* CalculatorViewController.swift */,
 				204DA7F22C6AB45300868987 /* CalculatorViewController.xib */,
+				205AC9302C6C1A8400A1C82E /* StackViewController.swift */,
+				205AC9312C6C1A8400A1C82E /* StackViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				205AC9332C6C1A8400A1C82E /* StackViewController.xib in Resources */,
 				0709678B2B68053F00E009C0 /* LaunchScreen.storyboard in Resources */,
 				070967882B68053F00E009C0 /* Assets.xcassets in Resources */,
 				204DA7F42C6AB45300868987 /* CalculatorViewController.xib in Resources */,
@@ -187,6 +194,7 @@
 				070967832B68053C00E009C0 /* TaskViewController.swift in Sources */,
 				0709679A2B680B4300E009C0 /* TaskPresenter.swift in Sources */,
 				0709679C2B684F1900E009C0 /* TasksCollectionViewCell.swift in Sources */,
+				205AC9322C6C1A8400A1C82E /* StackViewController.swift in Sources */,
 				0709677F2B68053C00E009C0 /* AppDelegate.swift in Sources */,
 				070967812B68053C00E009C0 /* SceneDelegate.swift in Sources */,
 			);
