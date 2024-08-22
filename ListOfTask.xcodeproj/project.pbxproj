@@ -21,6 +21,10 @@
 		204DA7F42C6AB45300868987 /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 204DA7F22C6AB45300868987 /* CalculatorViewController.xib */; };
 		205AC9322C6C1A8400A1C82E /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205AC9302C6C1A8400A1C82E /* StackViewController.swift */; };
 		205AC9332C6C1A8400A1C82E /* StackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 205AC9312C6C1A8400A1C82E /* StackViewController.xib */; };
+		20A6C5032C76FDBD00BDFA22 /* CollectionViewExample.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A6C5022C76FDBD00BDFA22 /* CollectionViewExample.xib */; };
+		20A6C5042C76FDBD00BDFA22 /* CollectionViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A6C5012C76FDBD00BDFA22 /* CollectionViewExample.swift */; };
+		20A6C5072C770A6500BDFA22 /* ExampleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A6C5062C770A6500BDFA22 /* ExampleCollectionViewCell.xib */; };
+		20A6C5082C770A6500BDFA22 /* ExampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A6C5052C770A6500BDFA22 /* ExampleCollectionViewCell.swift */; };
 		20BA4EAE2C76598100B7574D /* ExampleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BA4EAD2C76598100B7574D /* ExampleTableViewCell.xib */; };
 		20BA4EAF2C76598100B7574D /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BA4EAC2C76598100B7574D /* ExampleTableViewCell.swift */; };
 		20BA4EB22C7677C600B7574D /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BA4EB12C7677C600B7574D /* DetailViewController.xib */; };
@@ -46,6 +50,10 @@
 		204DA7F22C6AB45300868987 /* CalculatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
 		205AC9302C6C1A8400A1C82E /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 		205AC9312C6C1A8400A1C82E /* StackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StackViewController.xib; sourceTree = "<group>"; };
+		20A6C5012C76FDBD00BDFA22 /* CollectionViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewExample.swift; sourceTree = "<group>"; };
+		20A6C5022C76FDBD00BDFA22 /* CollectionViewExample.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewExample.xib; sourceTree = "<group>"; };
+		20A6C5052C770A6500BDFA22 /* ExampleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCollectionViewCell.swift; sourceTree = "<group>"; };
+		20A6C5062C770A6500BDFA22 /* ExampleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleCollectionViewCell.xib; sourceTree = "<group>"; };
 		20BA4EAC2C76598100B7574D /* ExampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewCell.swift; sourceTree = "<group>"; };
 		20BA4EAD2C76598100B7574D /* ExampleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleTableViewCell.xib; sourceTree = "<group>"; };
 		20BA4EB02C7677C600B7574D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -108,10 +116,14 @@
 				205AC9312C6C1A8400A1C82E /* StackViewController.xib */,
 				20BC8BA92C7517B200D4E65C /* TableViewExample.swift */,
 				20BC8BAA2C7517B200D4E65C /* TableViewExample.xib */,
+				20A6C5012C76FDBD00BDFA22 /* CollectionViewExample.swift */,
+				20A6C5022C76FDBD00BDFA22 /* CollectionViewExample.xib */,
 				20BA4EAC2C76598100B7574D /* ExampleTableViewCell.swift */,
 				20BA4EAD2C76598100B7574D /* ExampleTableViewCell.xib */,
 				20BA4EB02C7677C600B7574D /* DetailViewController.swift */,
 				20BA4EB12C7677C600B7574D /* DetailViewController.xib */,
+				20A6C5052C770A6500BDFA22 /* ExampleCollectionViewCell.swift */,
+				20A6C5062C770A6500BDFA22 /* ExampleCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -198,7 +210,9 @@
 				204DA7F42C6AB45300868987 /* CalculatorViewController.xib in Resources */,
 				20BC8BAC2C7517B200D4E65C /* TableViewExample.xib in Resources */,
 				20BA4EAE2C76598100B7574D /* ExampleTableViewCell.xib in Resources */,
+				20A6C5072C770A6500BDFA22 /* ExampleCollectionViewCell.xib in Resources */,
 				070967862B68053C00E009C0 /* Main.storyboard in Resources */,
+				20A6C5032C76FDBD00BDFA22 /* CollectionViewExample.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,10 +228,12 @@
 				204DA7F32C6AB45300868987 /* CalculatorViewController.swift in Sources */,
 				20BA4EB32C7677C600B7574D /* DetailViewController.swift in Sources */,
 				070967832B68053C00E009C0 /* TaskViewController.swift in Sources */,
+				20A6C5082C770A6500BDFA22 /* ExampleCollectionViewCell.swift in Sources */,
 				20BC8BAB2C7517B200D4E65C /* TableViewExample.swift in Sources */,
 				0709679A2B680B4300E009C0 /* TaskPresenter.swift in Sources */,
 				0709679C2B684F1900E009C0 /* TasksCollectionViewCell.swift in Sources */,
 				205AC9322C6C1A8400A1C82E /* StackViewController.swift in Sources */,
+				20A6C5042C76FDBD00BDFA22 /* CollectionViewExample.swift in Sources */,
 				20BA4EAF2C76598100B7574D /* ExampleTableViewCell.swift in Sources */,
 				0709677F2B68053C00E009C0 /* AppDelegate.swift in Sources */,
 				070967812B68053C00E009C0 /* SceneDelegate.swift in Sources */,
